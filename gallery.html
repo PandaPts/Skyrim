@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Province Gallery | Skyrim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="bg-overlay"></div>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <h1>Skyrim</h1>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="shouts.html">Shouts</a>
+          <a href="calc.html">Calculator</a>
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-title">Province Gallery</h2>
+
+          <!-- Фильтры галереи -->
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="city">Cities</button>
+            <button class="filter-btn" data-filter="location">Locations</button>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Whiterun skyrim.webp"
+                alt="Whiterun"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Whiterun</h3>
+                <p>The heart of Skyrim.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Solitude.jpg"
+                alt="Solitude"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Solitude</h3>
+                <p>The capital and stronghold of the Imperial Legion.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Riften.webp"
+                alt="Riften"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Riften</h3>
+                <p>Home of the Thieves Guild, nestled in the autumn forest.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Winterhold.png"
+                alt="Winterhold"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Winterhold</h3>
+                <p>
+                  Once a great capital, now home to the College of Winterhold.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Markarth.jpg"
+                alt="Markarth"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Markarth</h3>
+                <p>The City of Stone, built into the ancient Dwemer ruins.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Windhelm.png"
+                alt="Windhelm"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Windhelm</h3>
+                <p>
+                  The oldest city in Skyrim and the seat of the Stormcloaks.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Falkreath.webp"
+                alt="Falkreath"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Falkreath</h3>
+                <p>Surrounded by dense forests and ancient graveyards.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Dawnstar.jpg"
+                alt="Dawnstar"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Dawnstar</h3>
+                <p>A bustling port city plagued by nightmares.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="location">
+              <img
+                src="img/Blackreach.png"
+                alt="Blackreach"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Blackreach</h3>
+                <p>A massive underground city of the Dwemer.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Raven Rock.png"
+                alt="Raven Rock"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Raven Rock</h3>
+                <p>A Dunmer settlement on the island of Solstheim.</p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="location">
+              <img
+                src="img/High Hrothgar.jpg"
+                alt="High Hrothgar"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>High Hrothgar</h3>
+                <p>
+                  The monastery of the Greybeards, perched atop the Throat of
+                  the World.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item" data-category="city">
+              <img
+                src="img/Morthal.webp"
+                alt="Morthal"
+                referrerpolicy="no-referrer"
+              />
+              <div class="gallery-overlay">
+                <h3>Morthal</h3>
+                <p>
+                  A small, fog-shrouded town in the middle of the Hjaalmarch
+                  marsh.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Структура Лайтбокса -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Close Lightbox">
+        &times;
+      </button>
+      <div class="lightbox-content">
+        <img alt="Zoomed Image" />
+        <div class="lightbox-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 The Elder Scrolls V: Skyrim Fan Project. All rights
+          reserved by Bethesda Softworks.
+        </p>
+        <p>Developed as part of the Applied Programming course.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

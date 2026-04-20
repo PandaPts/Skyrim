@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact the Jarl | Skyrim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="noise"></div>
+    <div class="bg-overlay"></div>
+
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo"><h1>Skyrim</h1></a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="shouts.html">Shouts</a>
+          <a href="calc.html">Calculator</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Send a Courier</h2>
+
+          <div class="scroll-wrapper">
+            <!-- ЗАПЕЧАТАННОЕ СОСТОЯНИЕ -->
+            <div
+              class="scroll-sealed"
+              id="scrollSealed"
+              title="Click to open the scroll"
+            >
+              <div class="scroll-roll-sealed"></div>
+              <div class="scroll-body-sealed">
+                <div class="wax-seal">
+                  <span>⚔</span>
+                  <div class="seal-crack"></div>
+                </div>
+              </div>
+              <div class="scroll-roll-sealed"></div>
+              <div class="scroll-hint">◆ Click to open the scroll ◆</div>
+            </div>
+
+            <!-- ОТКРЫТОЕ СОСТОЯНИЕ -->
+            <div class="scroll-opened" id="scrollOpened">
+              <div class="scroll-roll top"></div>
+              <div class="scroll-body">
+                <div class="scroll-content">
+                  <form id="contact-form" action="https://formsubmit.co/cetpanda@gmail.com" method="POST" novalidate>
+                    <!-- Имя + Раса -->
+                    <div class="form-grid">
+                      <div class="form-group" id="group-name">
+                        <label for="name">Your name</label>
+                        <input type="text" name="name" id="name" placeholder="Dovahkiin" required />
+                        <div class="field-error" id="err-name">
+                          Please provide your name, Dovahkiin
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="contact">Email or Phone</label>
+                        <input type="text" name="contact" id="contact" placeholder="Email or Phone" required />
+                      </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="race">Your Race</label>
+                        <select name="race" id="race">
+                          <option>Nord</option>
+                          <option>Imperial</option>
+                          <option>Khajiit</option>
+                          <option>Argonian</option>
+                          <option>Dark Elf</option>
+                          <option>High Elf</option>
+                          <option>Wood Elf</option>
+                          <option>Orc</option>
+                          <option>Breton</option>
+                          <option>Redguard</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="scroll-divider"></div>
+
+                    <!-- Теги темы -->
+                    <div class="form-group">
+                      <span class="subject-label">Subject of the request</span>
+                      <div class="subject-tags" id="subjectTags">
+                        <button
+                          type="button"
+                          class="subject-tag selected"
+                          data-value="Dragon Threat"
+                        >
+                          The Threat of the Dragon
+                        </button>
+                        <button
+                          type="button"
+                          class="subject-tag"
+                          data-value="Civil War"
+                        >
+                          Civil War
+                        </button>
+                        <button
+                          type="button"
+                          class="subject-tag"
+                          data-value="Trade Route"
+                        >
+                          The Trade Route
+                        </button>
+                        <button
+                          type="button"
+                          class="subject-tag"
+                          data-value="Bounty"
+                        >
+                          Announcement of the Award
+                        </button>
+                        <button
+                          type="button"
+                          class="subject-tag"
+                          data-value="The Companions"
+                        >
+                          The Companions
+                        </button>
+                        <button
+                          type="button"
+                          class="subject-tag"
+                          data-value="College of Winterhold"
+                        >
+                          College of Winterhold
+                        </button>
+                      </div>
+                      <input type="hidden" name="subject" id="subject" value="Dragon Threat" />
+                    </div>
+
+                    <div class="scroll-divider"></div>
+
+                    <!-- Сообщение -->
+                    <div
+                      class="form-group form-group--with-counter"
+                      id="group-message"
+                    >
+                      <label for="message">Message to the Jarl</label>
+                      <textarea
+                        id="message" name="message"
+                        rows="6"
+                        placeholder="I've come to talk about the threat of the dragon...."
+                      ></textarea>
+                      <div class="field-error" id="err-message">
+                        The scroll cannot be empty
+                      </div>
+                      <div class="char-counter" id="charCounter">0 / 500</div>
+                    </div>
+
+                    <div class="form-footer">
+                      <button type="submit" class="btn-dispatch" id="submitBtn">
+                        <span class="btn-text">Send a Messenger</span>
+                      </button>
+                    </div>
+                  </form>
+                  <!-- Сообщение об успехе -->
+                  <div id="contact-success" class="success-scroll">
+                    <div class="success-icon">📜</div>
+                    <h3>The message has been sent!</h3>
+                    <p>
+                      "I've been looking for you. Something needs to be handed
+                      over — in person."
+                    </p>
+                    <button id="retryBtn" type="button" class="btn-retry">
+                      Send Another Message
+                    </button>
+                  </div>
+                </div>
+                <!-- /содержимое свитка -->
+              </div>
+              <!-- /тело свитка -->
+              <div class="scroll-roll bottom"></div>
+            </div>
+            <!-- /открытый свиток -->
+          </div>
+          <!-- /обертка свитка -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 The Elder Scrolls V: Skyrim Fan Project. All rights
+          reserved by Bethesda Softworks.
+        </p>
+        <p>Developed as part of the Applied Programming course.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

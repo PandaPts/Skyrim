@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damage Calculator | Skyrim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="bg-overlay"></div>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <h1>Skyrim</h1>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="shouts.html">Shouts</a>
+          <a href="calc.html" class="active">Calculator</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="calc">
+        <div class="container">
+          <h2 class="section-title">Damage Calculator</h2>
+          <div class="calc-box" id="calc-container">
+            <div class="calc-sword-icon">⚔️</div>
+            <div class="form-group">
+              <label for="base-dmg">Base Weapon Damage</label>
+              <input type="number" id="base-dmg" value="10" min="1" />
+            </div>
+            <div class="form-group">
+              <label for="skill-level">Skill Level (0-100)</label>
+              <input
+                type="number"
+                id="skill-level"
+                value="15"
+                min="0"
+                max="100"
+              />
+            </div>
+            <div class="form-group">
+              <label for="perks">Perk Multiplier (e.g. 1.2)</label>
+              <input type="number" id="perks" value="1.0" step="0.1" min="1" />
+            </div>
+            <button id="calc-btn" class="btn" type="button">
+              Calculate Damage
+            </button>
+            <div class="calc-result-container">
+              <div id="calc-result" class="result">
+                <div class="result-label">Total Damage</div>
+                <div class="calc-value-display" id="dmg-value">0</div>
+              </div>
+              <div id="last-calc" class="calc-history">
+                Last Calculation: <span id="history-val">none</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 The Elder Scrolls V: Skyrim Fan Project. All rights
+          reserved by Bethesda Softworks.
+        </p>
+        <p>Developed as part of the Applied Programming course.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
